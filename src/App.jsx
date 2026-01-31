@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import JobHeader from "./components/JobHeader";
 import JobList from "./components/JobList";
 import JobDetail from "./components/JobDetail";
+import Footer from "./components/Footer";
 
 function App() {
   const [jobs, setJobs] = useState([]); // Database se aane waala sara data
@@ -51,6 +52,8 @@ function App() {
           </div>
         </div>
       </div>
+
+      <Footer/>
     </div>
   );
 }

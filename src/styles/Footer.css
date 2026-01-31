@@ -1,0 +1,76 @@
+.footer-container {
+  background-color: #007bff; /* Aapki image wala blue color */
+  padding: 40px 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Takki mobile par break ho sake */
+  gap: 20px;
+}
+
+/* Brand Section */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-placeholder {
+  width: 100px;
+  height: 40px;
+  background-color: white;
+}
+
+.subheading {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Links Section */
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Social Icons */
+.footer-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.social-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #ccc; /* Grey circles */
+  border-radius: 50%;
+}
+
+/* Responsive (Mobile View) */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Sab vertical ho jayega */
+    text-align: center;
+  }
+
+  .footer-brand {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
