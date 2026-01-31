@@ -9,15 +9,15 @@ function App() {
   const [filteredJobs, setFilteredJobs] = useState([]); // Filter hone ke baad dikhne waala data
   const [selectedJob, setSelectedJob] = useState(null);
 
-  // Step 1: Backend (naukri DB) se data
+  // Step 1: Backend 
   useEffect(() => {
-    fetch("https://job-portal-backend-4uls.onrender.com")
+    fetch("https://job-portal-backend-4uls.onrender.com/jobs")
       .then((res) => res.json())
       .then((data) => {
 
         setJobs(data);
-        setFilteredJobs(data); // Shuruat mein sab dikhao
-        setSelectedJob(data[0]); // Pehli job detail mein dikhao
+        setFilteredJobs(data); // start mein sab dikhao
+        setSelectedJob(data[0]); // 1st job detail mein dikhao
       })
       .catch(err => console.error("Error fetching jobs:", err));
   }, []);
