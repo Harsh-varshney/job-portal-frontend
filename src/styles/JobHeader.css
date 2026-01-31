@@ -1,16 +1,15 @@
-/* JobHeader.css */
 
+/* ----- Navbar ----- */
 .navbar-custom {
   border-bottom: 1px solid #eee;
-  padding: 15px 0;
+  padding: 10px 15px; /* mobile padding */
   background-color: #fff;
 }
 
 .logo-text {
   color: #1a365d;
   font-weight: bold;
-  font-size: 24px;
-  text-decoration: none;
+  font-size: 20px; /* smaller on mobile */
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -20,8 +19,9 @@
   color: #555;
   font-weight: 600;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 13px;
   transition: 0.2s;
+  display: none; /* hide links on mobile */
 }
 
 .nav-link-custom:hover {
@@ -34,18 +34,39 @@
   padding-bottom: 5px;
 }
 
+/* Show nav links on tablet+ */
+@media (min-width: 768px) {
+  .logo-text {
+    font-size: 24px;
+  }
+  .nav-link-custom {
+    display: inline-block;
+    font-size: 15px;
+  }
+}
+
+/* ----- Main Title ----- */
 .main-title {
   font-family: 'serif';
   font-weight: bold;
-  font-size: 42px;
+  font-size: 28px; /* mobile-first */
   color: #111;
+  margin-bottom: 15px;
 }
 
+@media (min-width: 768px) {
+  .main-title {
+    font-size: 42px;
+  }
+}
+
+/* ----- Search Box ----- */
 .search-box-wrapper {
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
   display: flex;
+  flex-direction: column; /* mobile: stacked */
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   background-color: #fff;
 }
@@ -53,18 +74,20 @@
 .search-input-field {
   border: none;
   outline: none;
-  padding: 12px 20px;
+  padding: 12px 15px;
   font-size: 14px;
-  flex: 1;
+  width: 100%;
+  margin: 5px 0;
 }
 
 .search-btn-custom {
   background-color: #00d084;
   color: white;
   border: none;
-  padding: 0 30px;
+  padding: 10px 0;
   font-weight: bold;
   font-size: 16px;
+  margin-top: 5px;
   transition: 0.3s ease;
 }
 
@@ -73,15 +96,37 @@
   box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* Tablet+ search box row layout */
+@media (min-width: 768px) {
+  .search-box-wrapper {
+    flex-direction: row;
+  }
+  .search-input-field {
+    margin: 0;
+    flex: 2;
+  }
+  .search-btn-custom {
+    flex: 1;
+    margin: 0;
+    padding: 0 30px;
+  }
+}
+
+/* ----- Tabs ----- */
+.d-flex.border-bottom.mb-4 {
+  overflow-x: auto; /* scrollable on mobile */
+}
+
 .tab-button {
   border: none;
   background: none;
-  padding-bottom: 12px;
-  margin-right: 30px;
+  padding-bottom: 10px;
+  margin-right: 15px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px; /* mobile */
   color: #777;
   cursor: pointer;
+  white-space: nowrap;
   transition: 0.2s;
 }
 
@@ -90,19 +135,81 @@
   border-bottom: 3px solid #0d6efd;
 }
 
+@media (min-width: 768px) {
+  .tab-button {
+    font-size: 14px;
+    margin-right: 30px;
+  }
+}
+
+/* ----- Filters Row ----- */
+.d-flex.flex-wrap {
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
 .filter-badge {
   border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 6px 15px;
-  font-size: 13px;
+  padding: 6px 12px;
+  font-size: 12px;
   background-color: white;
   color: #555;
-  margin-right: 10px;
-  margin-bottom: 10px;
   transition: 0.2s;
 }
 
 .filter-badge:hover {
   background-color: #f8f9fa;
   border-color: #ccc;
+}
+
+@media (min-width: 768px) {
+  .filter-badge {
+    padding: 6px 15px;
+    font-size: 13px;
+  }
+}
+
+/* ----- Images / Icons ----- */
+img, i {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ----- Utility Classes ----- */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Hamburger icon */
+.hamburger-icon {
+  font-size: 28px;
+}
+
+/* Mobile dropdown menu */
+.mobile-menu {
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+}
+
+.mobile-link {
+  padding: 10px 0;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-link:last-child {
+  border-bottom: none;
+}
+
+.mobile-link i {
+  margin-right: 8px;
 }

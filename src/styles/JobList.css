@@ -1,17 +1,19 @@
-/* JobList.css */
+/* ---------------- JobList.css ---------------- */
 
 .job-list-container {
-  height: 90vh;
-  overflow-y: auto;  
-  overflow-x: hidden; 
+  /* height: 90vh; */
+  overflow-y: auto;
+  overflow-x: hidden;
   padding-right: 10px;
-  width: 100%;       
+  width: 100%;
 }
+
+/* ----- Job Card ----- */
 .job-card {
   border: 1px solid #dee2e6;
   border-radius: 10px;
-  padding: 15px;
-  margin-bottom: 15px;
+  padding: 12px;
+  margin-bottom: 12px;
   background-color: #fff;
   position: relative;
   cursor: pointer;
@@ -29,6 +31,7 @@
   background-color: #f0f7ff;
 }
 
+/* ----- Company Logo ----- */
 .company-logo-placeholder {
   width: 50px;
   height: 50px;
@@ -39,8 +42,10 @@
   justify-content: center;
   font-weight: bold;
   color: #666;
+  flex-shrink: 0;
 }
 
+/* ----- Arrow Indicator ----- */
 .blue-arrow {
   position: absolute;
   right: -12px;
@@ -53,6 +58,7 @@
   z-index: 10;
 }
 
+/* ----- View Similar Link ----- */
 .view-similar {
   color: #0d6efd;
   font-size: 13px;
@@ -62,4 +68,55 @@
 
 .view-similar:hover {
   text-decoration: underline;
+}
+
+/* ----------------- RESPONSIVE ----------------- */
+@media (max-width: 768px) {
+  .job-card {
+    padding: 10px;
+  }
+
+  .job-card .d-flex.justify-content-between {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .company-logo-placeholder {
+    width: 40px;
+    height: 40px;
+  }
+
+  .job-card h6 {
+    font-size: 14px;
+  }
+
+  .job-card p,
+  .job-card .d-flex span {
+    font-size: 12px;
+  }
+
+  .view-similar {
+    font-size: 12px;
+  }
+
+  .blue-arrow {
+    right: -8px;
+    border-left: 12px solid #0d6efd;
+  }
+}
+
+/* Optional: tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .job-card h6 {
+    font-size: 16px;
+  }
+  .job-card p,
+  .job-card .d-flex span {
+    font-size: 13px;
+  }
+  .company-logo-placeholder {
+    width: 45px;
+    height: 45px;
+  }
 }

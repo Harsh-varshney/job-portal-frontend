@@ -1,5 +1,6 @@
+
 .footer-container {
-  background-color: #007bff; /* Aapki image wala blue color */
+  background-color: #007bff; /* primary blue */
   padding: 40px 20px;
   color: white;
   font-family: Arial, sans-serif;
@@ -11,11 +12,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Takki mobile par break ho sake */
+  flex-wrap: wrap; /* mobile pe break ho sake */
   gap: 20px;
 }
 
-/* Brand Section */
+/* ----- Brand Section ----- */
 .footer-brand {
   display: flex;
   align-items: center;
@@ -33,7 +34,7 @@
   font-size: 16px;
 }
 
-/* Links Section */
+/* ----- Links Section ----- */
 .footer-links {
   display: flex;
   gap: 20px;
@@ -43,9 +44,15 @@
   color: white;
   text-decoration: none;
   font-size: 14px;
+  transition: 0.2s;
 }
 
-/* Social Icons */
+.footer-links a:hover {
+  color: #f0f0f0;
+  text-decoration: underline;
+}
+
+/* ----- Social Icons Section ----- */
 .footer-socials {
   display: flex;
   gap: 15px;
@@ -54,23 +61,61 @@
 .social-circle {
   width: 40px;
   height: 40px;
-  background-color: #ccc; /* Grey circles */
+  background-color: #ccc;
   border-radius: 50%;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
-/* Responsive (Mobile View) */
+.social-circle:hover {
+  background-color: #fff;
+}
+
 @media (max-width: 768px) {
   .footer-content {
-    flex-direction: column; /* Sab vertical ho jayega */
+    flex-direction: column; /* vertical layout */
     text-align: center;
+    gap: 15px;
   }
 
   .footer-brand {
     flex-direction: column;
+    gap: 10px;
   }
 
   .footer-links {
     flex-direction: column;
     gap: 10px;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .logo-placeholder {
+    width: 80px;
+    height: 30px;
+  }
+
+  .subheading {
+    font-size: 14px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+  }
+
+  .social-circle {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer-links a {
+    font-size: 14px;
+  }
+  .subheading {
+    font-size: 15px;
   }
 }
