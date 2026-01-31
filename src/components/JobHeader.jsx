@@ -22,7 +22,7 @@ const JobHeader = ({ onSearch }) => {
             <a href="#" className="nav-link-custom nav-link-active">Jobs</a>
             <a href="#" className="nav-link-custom">Hiring Partners</a>
             <div className="text-primary fs-4 cursor-pointer">
-              <i className="fa-solid fa-user"></i>
+              <i style={{color : "black"}} className="fa-solid fa-user"></i>
             </div>
           </nav>
 
