@@ -11,7 +11,7 @@ function App() {
 
   // Step 1: Backend (naukri DB) se data
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/jobs")
+    fetch("https://job-portal-backend-4uls.onrender.com")
       .then((res) => res.json())
       .then((data) => {
 
