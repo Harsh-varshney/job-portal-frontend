@@ -181,8 +181,7 @@ img, i {
 .cursor-pointer {
   cursor: pointer;
 }
-
-/* Hamburger icon */
+/* Hamburger icon for mobile */
 .hamburger-icon {
   font-size: 28px;
 }
